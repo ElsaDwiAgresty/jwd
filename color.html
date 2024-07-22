@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer Box</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #colorBox {
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #colorInputText, #computedColorText {
+            margin: 10px 0;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorBox">
+        <div id="colorInputText">Nama</div>
+        <div id="computedColorText">Kode rgb</div>
+    </div>
+    <input type="text" id="bgColorInput" placeholder="Enter background color (name or hex)">
+    <button onclick="toggleTextColor()">Toggle Text Color</button>
+
+    <script>
+        // Change background color based on input value
+        document.getElementById('bgColorInput').addEventListener('input', function() {
+            var colorBox = document.getElementById('colorBox');
+            var colorInput = this.value;
+            colorBox.style.backgroundColor = colorInput;
+            document.getElementById('colorInputText').textContent = colorInput;
+            document.getElementById('computedColorText').textContent = getComputedStyle(colorBox).backgroundColor;
+        });
+
+        // Toggle text color between white and black
+        function toggleTextColor() {
+            var colorBox = document.getElementById('colorBox');
+            if (colorBox.style.color === 'white') {
+                colorBox.style.color = 'black';
+            } else {
+                colorBox.style.color = 'white';
+            }
+        }
+    </script>
+</body>
+</html>
