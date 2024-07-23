@@ -1,83 +1,98 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body class="flex items-center justify-center h-screen">
-    <div class="border max-w-full mx-auto px-5 rounded-xl">
-        <header>
-            <h1 class="mt-4 text-center font-bold text-3xl underline">Contact Us</h1>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="flex h-screen items-center justify-center">
+    <div class="mx-auto max-w-full rounded-xl border px-5">
+      <header>
+        <h1 class="mt-4 text-center text-3xl font-bold underline">
+          Contact Us
+        </h1>
+      </header>
 
-        <nav class="mt-8">
-            <div>
-                <ul class="list-disc list-inside">
-                    <li>
-                        <a href="index.html" class="text-blue-500 underline">Home</a>
-                    </li>
-            
-                    <li>
-                        <a href="index.html" class="text-blue-500 underline">About LTS</a>
-                    </li>
-            
-                    <li>
-                        <a href="index.html" class="text-blue-500 underline">Our Menu</a>
-                    </li>
-            
-                    <li>
-                        <a href="Hours.html" class="text-blue-500 underline">Store Hours</a>
-                    </li>
-            
-                </ul>
+      <nav class="mt-8">
+        <div>
+          <ul class="list-inside list-disc">
+            <li>
+              <a href="index.html" class="text-blue-500 underline">Home</a>
+            </li>
+
+            <li>
+              <a href="index.html" class="text-blue-500 underline">About LTS</a>
+            </li>
+
+            <li>
+              <a href="index.html" class="text-blue-500 underline">Our Menu</a>
+            </li>
+
+            <li>
+              <a href="Hours.html" class="text-blue-500 underline"
+                >Store Hours</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <figure class="mt-4 px-5">
+        <img src="img/tacos_close_up_400x260.png" alt="" />
+        <p>Little Taco Shop Tacos</p>
+      </figure>
+      <hr class="mt-4" />
+
+      <main>
+        <h1 class="mt-4 text-xl font-bold">Our Contact Form</h1>
+        <br />
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset class="border">
+            <legend>Send Us A Message</legend>
+            <div class="mt-2 px-5">
+              <label>Name : </label>
+              <input
+                type="text"
+                placeholder="enter your name"
+                class="border px-5 text-xs"
+              />
             </div>
-        </nav>
+            <div class="mt-4 px-5">
+              <label>Email : </label>
+              <input
+                type="email"
+                placeholder="enter your email"
+                class="border px-5 text-xs"
+              />
+            </div>
+            <div class="mb-5 mt-4 px-5">
+              <label>Your Message : </label><br />
+              <textarea
+                rows="6"
+                class="w-full border px-5 text-xs"
+                placeholder="type your message here"
+              ></textarea>
+            </div>
+          </fieldset>
+        </form>
 
-        <figure class="mt-4 px-5">
-            <img src="img/tacos_close_up_400x260.png" alt="">
-            <p>Little Taco Shop Tacos</p>
-        </figure>
-        <hr class="mt-4">
-
-        <main>
-        <h1 class="mt-4 font-bold text-xl">Our Contact Form</h1>
-        <br>
-            <form action="https://httpbin.org/get" method="get">
-               <fieldset class="border">
-                    <legend>Send Us A Message</legend>
-                    <div class="mt-2 px-5">
-                        <label>Name : </label>
-                        <input type="text" placeholder="enter your name" class="border px-5 text-xs">
-                    </div>
-                    <div class="mt-4 px-5">
-                        <label>Email : </label>
-                        <input type="email" placeholder="enter your email" class="border px-5 text-xs">
-                    </div>
-                    <div class="mt-4 px-5 mb-5">
-                        <label>Your Message : </label><br>
-                        <textarea rows="6" class="border w-full text-xs px-5" placeholder="type your message here"></textarea> 
-                    </div>
-                    
-               </fieldset>
-
-            </form>
-
-        <h2 class="mt-8 font-bold text-xl">Our Location</h2>
+        <h2 class="mt-8 text-xl font-bold">Our Location</h2>
         <address class="mt-4">
-            555 Taco Temptation Lane, Suite T<br> Kansas City, MO 55555-5555<br>
+          555 Taco Temptation Lane, Suite T<br />
+          Kansas City, MO 55555-5555<br />
         </address>
         <p class="mt-4 italic">
-            phone : <a href="tel:+55555555555" class="text-blue-500 underline ">555-5555-5555</a><br><br>
+          phone :
+          <a href="tel:+55555555555" class="text-blue-500 underline"
+            >555-5555-5555</a
+          ><br /><br />
         </p>
         <a href="contact.html" class="text-blue-500 underline">Back to Top</a>
-        </main>
-        <br>
-        <hr>
+      </main>
+      <br />
+      <hr />
 
-        <footer class="mt-4">
-            Copyright © The Little Taco Shop
-        </footer>
+      <footer class="mt-4">Copyright © The Little Taco Shop</footer>
     </div>
-</body>
+  </body>
 </html>
