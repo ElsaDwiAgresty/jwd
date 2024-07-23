@@ -5,85 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="flex items-center justify-center h-screen">
+    <div class="border max-w-full mx-auto px-5 rounded-xl">
+        <header>
+            <h1 class="mt-4 text-center font-bold text-3xl underline">Contact Us</h1>
+        </header>
 
-<header>
-    <h1>
-        Contact Us
-    </h1>
-</header>
+        <nav class="mt-8">
+            <div>
+                <ul class="list-disc list-inside">
+                    <li>
+                        <a href="index.html" class="text-blue-500 underline">Home</a>
+                    </li>
+            
+                    <li>
+                        <a href="index.html" class="text-blue-500 underline">About LTS</a>
+                    </li>
+            
+                    <li>
+                        <a href="index.html" class="text-blue-500 underline">Our Menu</a>
+                    </li>
+            
+                    <li>
+                        <a href="Hours.html" class="text-blue-500 underline">Store Hours</a>
+                    </li>
+            
+                </ul>
+            </div>
+        </nav>
 
-<nav>
-    <div>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-    
-            <li>
-                <a href="index.html">About LTS</a>
-            </li>
-    
-            <li>
-                <a href="contact.html">Our Menu</a>
-            </li>
-    
-            <li>
-                <a href="contact.html">Store Hours</a>
-            </li>
-       
-        </ul>
-        </div>
-</nav>
+        <figure class="mt-4 px-5">
+            <img src="img/tacos_close_up_400x260.png" alt="">
+            <p>Little Taco Shop Tacos</p>
+        </figure>
+        <hr class="mt-4">
 
-<figure>
-    <img src="img/tacos_close_up_400x260.png" alt="">
-    <p>Little Taco Shop Tacos</p>
-</figure>
-<hr>
+        <main>
+        <h1 class="mt-4 font-bold text-xl">Our Contact Form</h1>
+        <br>
+            <form action="https://httpbin.org/get" method="get">
+               <fieldset class="border">
+                    <legend>Send Us A Message</legend>
+                    <div class="mt-2 px-5">
+                        <label>Name : </label>
+                        <input type="text" placeholder="enter your name" class="border px-5 text-xs">
+                    </div>
+                    <div class="mt-4 px-5">
+                        <label>Email : </label>
+                        <input type="email" placeholder="enter your email" class="border px-5 text-xs">
+                    </div>
+                    <div class="mt-4 px-5 mb-5">
+                        <label>Your Message : </label><br>
+                        <textarea rows="6" class="border w-full text-xs px-5" placeholder="type your message here"></textarea> 
+                    </div>
+                    
+               </fieldset>
 
-<main>
-<h1>Our Contact Form</h1>
-<br>
-    <form action="https://httpbin.org/get" method="get">
-        <fieldset>
-        <legend>Send Us A Message</legend>
-        <p>
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="Your name"/>
+            </form>
+
+        <h2 class="mt-8 font-bold text-xl">Our Location</h2>
+        <address class="mt-4">
+            555 Taco Temptation Lane, Suite T<br> Kansas City, MO 55555-5555<br>
+        </address>
+        <p class="mt-4 italic">
+            phone : <a href="tel:+55555555555" class="text-blue-500 underline ">555-5555-5555</a><br><br>
         </p>
-        <p>
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="Your Email"/>
-        </p>
-        <p>
-            <label>Your Message:</label>
-            <br><br>
-            <textarea cols="30" rows="10" placeholder="Your Message"></textarea>
-        </p>
+        <a href="contact.html" class="text-blue-500 underline">Back to Top</a>
+        </main>
+        <br>
+        <hr>
 
-        </fieldset>
-        <button type="submit">
-            Send
-        </button>
-        <button type="reset">
-            Reset
-        </button>
-    </form>
-
-<h2>Our Location</h2>
-<address>
-    555 Taco Temptation Lane, Suite T
-    <br>
-    Kansas City, MO 55555-5555
-    <br>
-    phone : <a href="tel:+555555555555">555-5555-5555</a><br><br>
-    <a href="contact.html">Back to Top</a>
-</address>
-</main>
-<hr>
-<footer>
-    Copyright The Little Taco Shop
-</footer>
+        <footer class="mt-4">
+            Copyright © The Little Taco Shop
+        </footer>
+    </div>
 </body>
 </html>

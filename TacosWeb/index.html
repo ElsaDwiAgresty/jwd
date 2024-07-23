@@ -5,37 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class=" flex items-center justify-center h-screen">
+    <div class="border max-w-full mx-auto px-5 rounded-xl">
+<container>
 <header>
-  <h1 class="text-3xl font-bold underline">
+  <h1 class="text-3xl font-bold text-center underline mt-8">
     Welcome to The Little Taco Shop
   </h1>
 </header>
 
-<nav>
-  <div>
-    <ul>
+<nav class="mt-8">
+  <div >
+    <ul class="list-disc list-inside">
         <li>
-            <a href="index.html">About LTS</a>
+            <a href="#About LTS" class=" text-blue-500 underline">About LTS</a>
         </li>
 
         <li>
-            <a href="index.html">Our Menu</a>
+            <a href="#Menu" class=" text-blue-500 underline">Our Menu</a>
         </li>
 
         <li>
-            <a href="contact.html">Store Menu</a>
+            <a href="Hours.html" class=" text-blue-500 underline">Store Hours</a>
         </li>
 
         <li>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html" class=" text-blue-500 underline">Contact Us</a>
         </li>
    
     </ul>
     </div>
 </nav>
 
-<figure>
+<figure class="mt-8 px-5">
     <div>
         <img src="img/tacos_and_drink_400x267.png" alt="">
         <p>Tacos and a Drink</p>
@@ -43,93 +45,98 @@
 </figure>
 
 <hr>
-<div>
-    <h2>
-        About LTS
-    </h2>
-    <p>
-        LTS was founded in 2022. Our shop was built fron a <strong>love of tacos</strong>. We hope our shop adds a unique and interesting place to our little town.
-    </p>
-
-    <strong>Taco Trivia</strong>
-    <br><br>
-
-    <details>
-        <summary>
-            When did tacos first appear in the United States?
-        </summary>
+<div class="mt-8">
+    <section id="About LTS">
+        <h2 class="font-bold text-xl">About LTS</h2>
         <p>
-            Jeffry M.pilcher, taco historian and professor of history at the University of Minnesota, says the earliest mention of tacos in the United States are in a newspaper form 1905.<br>
-            (source: SmithSonian Magazine)
+            LTS was founded in 2022. Our shop was built fron a <strong>love of tacos</strong>🌮🌮🌮. 
+            
+            <br>We hope our shop adds a unique and interesting place to our little town.
         </p>
-    </details>
+    
+        <strong>Taco Trivia</strong>
+        <br><br>
+
+        <details>
+            <summary>
+                When did tacos first appear in the United States?
+            </summary>
+            <p class="mt-4">
+                Jeffry M.pilcher, taco historian and professor of history at the University 
+                
+                <br>of Minnesota, says the earliest mention of tacos in the United States <br>are in a newspaper form 1905.<br> 
+                
+                <cite>(source: <a href="https://www.smithsonianmag.com/" class="text-blue-500 hover:underline underline">Smithsonian Magazine</a>)</cite>
+            </p>
+        </details>
+    </section>
 </div>
 <hr>
 
-<h2>
-    Our Menu
-</h2>
-<table border="1">
-    <tr collspan="3">
-        <th>
-            <strong>Our Tacos</strong>
-        </th>
-    </tr>
-    <tr>
-        <th>Tacos</th>
-        <th>QTY</th>
-        <th>Price</th>
-    </tr>
+<section id="Menu">
+    <h2 class="mt-8 text-xl font-bold">Our Menu</h2>
+    
+    <div class="container mx-auto mt-4">
+        <table class="table-auto w-full">
+            <thead class="border-collapse border">
+                <tr>
+                    <td colspan="3" class="border text-center">Our Tacos</td>
+                </tr>
+                <tr>
+                    <th class="border p-8">Tacos</th>
+                    <th class="border p-2">Qty</th>
+                    <th class="border p-2">Price</th>
+                </tr>
+            </thead>
 
-    <tr >
-        <td rowspan="4">
-            Crunchy
-        </td>
-        <tr>
-            <td>1</td>
-            <td>$1.50</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>$2.50</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>$3.25</td>
-        </tr>
-    </tr>
-    <tr >
-        <td rowspan="4">
-            Soft
-        </td>
-        <tr>
-            <td>1</td>
-            <td>$2.00</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>$3.50</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>$4.50</td>
-        </tr>
-    </tr>
-    <tr collspan="3">
-        <th>
-            <strong>Our Tacos</strong>
-        </th>
-    </tr>
-</table>
+            <tbody class="border-collapse border">
+                <tr>
+                    <td rowspan="4" class="border p-2">Crunchy</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">1</td>
+                    <td class="border p-2">$1.50</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">2</td>
+                    <td class="border p-2">$2.50</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">3</td>
+                    <td class="border p-2">$3.25</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="4" class="border">Soft</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">1</td>
+                    <td class="border p-2">$1.50</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">2</td>
+                    <td class="border p-2">$2.50</td>
+                </tr>
+                <tr>
+                    <td class="border p-2">3</td>
+                    <td class="border p-2">$3.25</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</section>
 <br><br>
 
-<a href="index.html">Back to Top</a>
+<a href="index.html" class="text-blue-500 underline">Back to Top</a>
 <br><br>
 <hr>
 
-<footer>
-    Copyright The Little Taco Shop
+<footer class="mt-4">
+    Copyright © The Little Taco Shop
 </footer>
 
+</container>
+</div>
 </body>
 </html>
