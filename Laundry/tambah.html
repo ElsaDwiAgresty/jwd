@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Pesanan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div id="tambah_pesanan" class="main-content">
+      <div class="container mx-auto p-4">
+        <div class="baris">
+          <div class="col mt-2">
+            <div class="card rounded bg-white p-4 shadow">
+              <div class="card-title mb-4 flex items-center justify-between">
+                <div>
+                  <h2 class="text-2xl font-semibold">Tambah Pesanan</h2>
+                </div>
+                <div>
+                  <a
+                    href="tambah.php"
+                    class="btn-xs bg-primary rounded px-4 py-2 text-white"
+                    >Kembali</a
+                  >
+                </div>
+              </div>
+              <div class="card-body">
+                <form
+                  action="tambah.php"
+                  method="post"
+                  class="form-input"
+                  id="myForm"
+                >
+                  <fieldset class="rounded border p-4">
+                    <legend class="mb-4 text-lg font-medium">
+                      Data Tambah Pesanan
+                    </legend>
+                    <input type="hidden" />
+                    <div class="form-group mb-4">
+                      <label for="nama_pelanggan" class="mb-2 block"
+                        >Nama Pelanggan</label
+                      >
+                      <input
+                        type="text"
+                        name="nama_pelanggan"
+                        placeholder="Nama lengkap"
+                        autocomplete="off"
+                        id="nama_pelanggan"
+                        class="w-full rounded border p-2"
+                        required
+                        autofocus
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="notelp_pelanggan" class="mb-2 block"
+                        >Nomor Telepon</label
+                      >
+                      <input
+                        type="text"
+                        name="notelp_pelanggan"
+                        placeholder="Nomor Telepon"
+                        autocomplete="off"
+                        id="notelp_pelanggan"
+                        class="w-full rounded border p-2"
+                        required
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="berat" class="mb-2 block">Berat</label>
+                      <input
+                        type="number"
+                        step="any"
+                        name="berat"
+                        placeholder="berat"
+                        autocomplete="off"
+                        id="berat"
+                        class="w-full rounded border p-2"
+                        required
+                        oninput="calculateTotal()"
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="harga_perkilo" class="mb-2 block"
+                        >Harga Perkilo</label
+                      >
+                      <input
+                        type="number"
+                        step="any"
+                        name="harga_perkilo"
+                        placeholder="Harga Perkilo"
+                        autocomplete="off"
+                        id="harga_perkilo"
+                        class="w-full rounded border p-2"
+                        required
+                        oninput="calculateTotal()"
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="lama_pengerjaan" class="mb-2 block"
+                        >Lama Pengerjaan</label
+                      >
+                      <input
+                        type="text"
+                        name="lama_pengerjaan"
+                        placeholder="Lama Pengerjaan"
+                        autocomplete="off"
+                        id="lama_pengerjaan"
+                        class="w-full rounded border p-2"
+                        required
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="total" class="mb-2 block"
+                        >Total Pembayaran</label
+                      >
+                      <input
+                        type="text"
+                        name="total"
+                        placeholder="Total Pembayaran"
+                        autocomplete="off"
+                        id="total"
+                        class="w-full rounded border p-2"
+                        readonly
+                      />
+                    </div>
+                    <div class="form-group mb-4">
+                      <label for="NIK" class="mb-2 block">NIK</label>
+                      <input
+                        type="text"
+                        maxlength="16"
+                        minlength="16"
+                        name="NIK"
+                        placeholder="Masukkan NIK"
+                        autocomplete="off"
+                        id="NIK"
+                        class="w-full rounded border p-2"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <button
+                        type="submit"
+                        disabled
+                        id="submitButton"
+                        class="mt-2 rounded bg-blue-500 px-4 py-2 text-white"
+                        name="tambah_pesanan"
+                      >
+                        Tambah
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculateTotal() {
+        var berat = document.getElementById("berat").value;
+        var hargaPerkilo = document.getElementById("harga_perkilo").value;
+        var totalBayar = berat * hargaPerkilo;
+        document.getElementById("total").value = totalBayar;
+      }
+
+      const form = document.getElementById("myForm");
+      const submitButton = document.getElementById("submitButton");
+
+      form.addEventListener("input", () => {
+        // Check if all required fields are filled
+        const isValid = form.checkValidity();
+        submitButton.disabled = !isValid;
+      });
+    </script>
+
+    <footer class="text-center">
+      <p>&copy; <span id="tahun"></span> Laundry jwd.</p>
+      <script>
+        // mengambil tanggal hari ini
+        var now = new Date();
+        var tahun = now.getFullYear();
+        // menampilkan tahun di dalam elemen HTML
+        document.getElementById("tahun").innerHTML = tahun;
+      </script>
+    </footer>
+  </body>
+</html>
