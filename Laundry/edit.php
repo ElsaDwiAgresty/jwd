@@ -39,6 +39,10 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <td><input type="text" name="NIK" value="<?php echo $row['NIK'] ?>"></td>
             </tr>
             <tr>
+                <td>Dokum Nota</td>
+                <td><input type="text" name="fileToUpload" value="<?php echo $row['fileToUpload'] ?>"></td>
+            </tr>
+            <tr>
                 <td></td>
                 <td><input type="submit" name="submit" value="Update"></td>
             </tr>
