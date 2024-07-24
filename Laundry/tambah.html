@@ -61,6 +61,8 @@
                       <input
                         type="text"
                         name="notelp_pelanggan"
+                        maxlength="13"
+                        minlength="10"
                         placeholder="Nomor Telepon"
                         autocomplete="off"
                         id="notelp_pelanggan"
@@ -172,7 +174,6 @@
       const submitButton = document.getElementById("submitButton");
 
       form.addEventListener("input", () => {
-        // Check if all required fields are filled
         const isValid = form.checkValidity();
         submitButton.disabled = !isValid;
       });
@@ -181,10 +182,8 @@
     <footer class="text-center">
       <p>&copy; <span id="tahun"></span> Laundry jwd.</p>
       <script>
-        // mengambil tanggal hari ini
         var now = new Date();
         var tahun = now.getFullYear();
-        // menampilkan tahun di dalam elemen HTML
         document.getElementById("tahun").innerHTML = tahun;
       </script>
     </footer>

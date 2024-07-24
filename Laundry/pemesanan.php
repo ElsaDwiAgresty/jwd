@@ -10,7 +10,7 @@
     <div class="container mx-auto p-4">
         <button><a href="tambah.html" class="bg-blue-500 text-white py-2 px-4 rounded mt-2">Tambah Data+</a></button><br><br>
 
-        <h2 class="text-2xl font-semibold mb-4">Data Pemesanan</h2>
+        <h2 class="text-2xl font-semibold mb-4">Data Pemesanan Laundry</h2>
         <table class="min-w-full bg-white border border-gray-300">
             <thead>
                 <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
