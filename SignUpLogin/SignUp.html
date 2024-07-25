@@ -72,8 +72,8 @@
                 />
               </div>
               <div class="mt-4 text-sm">
-                <input type="checkbox" />
-                <label for=""
+                <input type="checkbox" id="agree" />
+                <label for="agree" id="agree"
                   ><strong
                     >I agree to all Term, Privacy Policy and Fees</strong
                   ></label
@@ -83,7 +83,9 @@
               <div>
                 <button
                   name="signup"
+                  id="signupButton"
                   class="mt-8 h-10 w-full rounded-full bg-black text-white"
+                  disabled
                 >
                   Sign Up
                 </button>
@@ -102,5 +104,11 @@
         </div>
       </div>
     </main>
+
+    <script>
+      document.getElementById("agree").addEventListener("change", function () {
+        document.getElementById("signupButton").disabled = !this.checked;
+      });
+    </script>
   </body>
 </html>
