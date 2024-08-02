@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Login</title>
+  </head>
+  <body>
+    <nav class="mt-8 px-10 font-semibold">ZHANEL</nav>
+
+    <main class="px-16">
+      <div class="grid grid-cols-2">
+        <div>
+          <div class="text-center">
+            <h1 class="mt-10 font-serif text-xl font-semibold">
+              HI WELCOME BACK!!
+            </h1>
+            <p class="">Let's start the journey with your account</p>
+          </div>
+          <div id="login">
+            <form action="Login.php" method="POST">
+              <fieldset class="mx-12 mt-12">
+                <div>
+                  <label for="username" class="px-2 font-semibold"
+                    >Username:<span class="text-red-600">*</span></label
+                  ><br />
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="h-10 w-full rounded-full border border-gray-500 px-4"
+                    placeholder="Enter Your Username"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <label for="password" class="px-2 font-semibold"
+                    >Password:<span class="text-red-600">*</span></label
+                  ><br />
+                  <input
+                    type="text"
+                    id="password"
+                    name="password"
+                    class="h-10 w-full rounded-full border border-gray-500 px-4"
+                    placeholder="Enter Your Password"
+                  />
+                </div>
+
+                <div>
+                  <button
+                    id="login"
+                    name="login"
+                    class="mt-8 h-10 w-full rounded-full bg-black text-lg text-white"
+                  >
+                    Login
+                  </button>
+                </div>
+
+                <div class="px-2">
+                  <p>
+                    Don't have account?<span
+                      ><a href="SignUp.html" class="px-2 text-green-700"
+                        >SignUp</a
+                      ></span
+                    >
+                  </p>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <img src="src/img/Lotus.jpg" alt="" class="rounded-xl" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
