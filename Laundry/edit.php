@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             </tr>
             <tr>
                 <td>NIK</td>
-                <td><input type="text" name="NIK" value="<?php echo $row['NIK'] ?>"></td>
+                <td><input type="text" name="NIK" value="<?php echo $row['NIK'] ?>" maxlength="16" minlength="16"></td>
             </tr>
             <tr>
                 <td>Dokum Nota</td>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body class="mx-24">
+    <div class=" bg-slate-500 ">
+        <nav class=" text-white flex justify-around">
+            <span class="text-xl font-bold">Aqnia</span>
+            <span>Home</span>
+            <span>About</span>
+            <span>Service</span>
+            <span>Contact Us</span>
+            <span>Help</span>
+        </nav>
+    </div>
+
+    <main>
+        <div class="mt-10 grid grid-cols-2">
+            <div>
+                <div class="font-bold font-sans">WELCOME TO AQNIA HOTEL! YOUR BEST CHOICE FOR VACATION</div>
+                <img src="hotel.jpg" alt="" class=" mt-4 w-fit">
+            </div>
+            <div class="mt-24 mx-8">
+                <p class="text-xl font-semibold">Best hotel with clean room and best service, with professional team we
+                    always give the best services for our costumer!</p>
+                <button id="myBtn" class="bg-blue-500 h-10 w-32 rounded-full text-white font-bold mt-4" >Book Now</button>
+
+                <div id="myModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+                    <div class="bg-blue-900 ">
+                        <div class="text-white">
+                            <h3 class="px-2 text-lg font-bold">Isi Data untuk Memesan</h3>
+                            <span class="absolute top-0 right-2" id ="closeModal">&times;</span>
+                                <form action="tambah.php">
+                                    <div class="px-5 flex space-x-10">
+                                        <div>
+                                            <label for="" class="font-semibold">Nama Lengkap</label>
+                                            <input type="text" class="rounded-md h-8 w-full text-black">
+                                        </div>
+                                        <div>
+                                            <label for="">Nomor Telepon</label>
+                                            <input type="text" class="rounded-md h-8 w-full text-black">
+                                        </div>
+                                    </div>
+                                    <div class="px-5 flex space-x-10">
+                                        <div>
+                                            <label for="jumlahOrang" id="jumlahOrang" class="font-semibold">Jumlah Orang</label>
+                                            <input type="text" class="rounded-md h-8 w-full text-black">
+                                        </div>
+                                        <div>
+                                            <label for="kamar" id="kamar">Jenis Kamar</label>
+                                            <select name="kamar" id="kamar" class="rounded-md h-8 w-full text-black">
+                                                <option value="2500000">Luxury Bugalow Two Bedroom</option>
+                                                <option value="1500000">Single Deluxe</option>
+                                                <option value="2000000">Double Deluxe</option>
+                                                <option value="3000000">Triple Room</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="px-5 flex space-x-10">
+                                        <div>
+                                            <label for="harga" id="harga" class="font-semibold">Harga</label>
+                                            <input type="text" class="rounded-md h-8 w-full text-black" readonly>
+                                        </div>
+                                        <div>
+                                            <label for="total" id="total" class="font-semibold">Total Pembayaran</label>
+                                            <input type="text" class="rounded-md h-8 w-full text-black" readonly>
+                                        </div>
+                                    </div>
+
+                                    <button class="px-5 mt-8 mb-4 bg-blue-500 rounded-lg h-8 w-48">Pesan Sekarang</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="">
+            <div class=" bg-slate-500 mt-10 text-white grid grid-cols-2 text-base">
+                    <div class="mt-8 px-5">
+                        <p class="px-2">Enjoy the best surf resort of Indonesia with family and friends. Located in most beautiful beach of Rote Island, 15 min. away from the best surfing spots and 45min away from airport, Manduna Resort is the best luxury boutique hotel for your next holiday in Indonesia.</p>
+                        
+
+                        <p class="mt-10">&copy;<span id="tahun"></span> AqniaHotel</p>
+                        <script>
+                            var Now = new Date();
+                            var tahun = Now.getFullYear();
+                            document.getElementById("tahun").innerHTML=tahun;
+                        </script>
+                    </div>
+
+                    <div class="mx-10 mt-8 px-5">
+                        <p>Our Social Media</p>
+                        <ul>
+                            <li>
+                               <a href=""><img src="instagram.png" alt="" class="h-10 w-10"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="twitter.png" alt="" class="h-8 w-8 mt-2"></a>
+                            </li>
+                        </ul>
+                    </div>
+            
+            </div>
+    </footer>
+    </main>
+</body>
+<script>
+    var kamar = document.getElementById("kamar");
+    var inputHarga = document.getElementById("harga");
+    var inputJumlahOrang = document.getElementById("jumlahOrang");
+    var inputTotalBayar = document.getElementById("total");
+
+    kamar.addEventListener("change", function () {
+        inputHarga.value = kamar.value;
+        hitungTotal();
+    });
+
+    inputJumlahOrang.addEventListener("input", function () {
+        hitungTotal();
+    });
+
+    function hitungTotal() {
+        var harga = parseInt(inputHarga.value) || 0;
+        var jumlahOrang = parseInt(inputJumlahOrang.value) || 0;
+        var bayar = harga * jumlahOrang;
+        inputTotalBayar.value = bayar;
+    }
+
+           //Modal
+           var btn = document.getElementById("myBtn");
+           var modal = document.getElementById("myModal");
+           var span = document.getElementById("closeModal");
+
+           btn.onclick = function(){
+                modal.classList.remove("hidden");
+           }
+
+           span.onclick = function(){
+                modal.classList.add("hidden");
+           }
+
+           window.onclick = function(event){
+            if(event.target == modal){
+                modal.classList.add("hidden");
+            }
+           }
+        </script>
+
+</html>
