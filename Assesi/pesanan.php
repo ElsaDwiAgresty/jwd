@@ -40,11 +40,41 @@ $tipeKamarVideo = [
 
 if (isset($_POST["submit"])) {
     if (pesanan($_POST) > 0) {
-        echo "
-            <script>
-                alert('Pesanan Berhasil Dibuat!');
-            </script>
-        ";
+
+        $durasiMenginap = $_POST["durasiMenginap"];
+        $diskon = ($durasiMenginap > 3) ? 10 : 0;
+
+        echo '
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Data Pemesan</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+            />
+            <link
+            href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"
+            rel="stylesheet"
+            />
+            <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+        </head>
+        <body>
+            <div class= "">
+            <p>Nama Pemesan : '. $_POST["namaPemesan"]. ' </p>
+            <p>Nomor Identitas : '. $_POST["nomorIdentitas"] . '</p>
+            <p>Jenis Kelamain : '. $_POST["jenisKelamin"] . '</p>
+            <p>Tipe Kamar : '. $_POST["tipeKamar"] . '</p>
+            <p>Durasi Penginapan : '. $_POST["durasiMenginap"] . '</p>
+            <p>Discount : '. $diskon .'</p>
+            <p>Total Bayar : '. $_POST["totalBayar"] . '</p>
+            </div>
+        </body>
+        </html>
+            ';
     } else {
         echo "
         <script>
@@ -304,6 +334,12 @@ if (isset($_POST["submit"])) {
             }
             document.getElementById('videoKamar').value = videoTipeKamar[pilihanKamar];
         })
+
+        const today = new Date().toISOString().split('T')[0];
+    
+        // Mengatur nilai atribut min dan max ke tanggal hari ini
+        document.getElementById('tanggalPesan').setAttribute('min', today);
+        document.getElementById('tanggalPesan').setAttribute('max', today);
     </script>
 
     <!-- FOOTER -->

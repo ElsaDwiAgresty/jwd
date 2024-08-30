@@ -24,8 +24,8 @@
           background-image: url("src/img/pemandangan.jpg");
           background-size: cover;
           background-position: center;
-          opacity: 1; /* Ubah ini untuk menyesuaikan opasitas */
-          z-index: -1; /* Menempatkan background di belakang konten */
+          opacity: 1; 
+          z-index: -1; 
         }
       </style>
 
@@ -76,7 +76,7 @@
             </div>
             <div>
                 <p class="mt-2 px-2 font-bold text-lg">Breakfast</p>
-                <p class="px-8">per-hari. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .Rp. 80.000 </p>
+                <p class="px-8">bayaran. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .Rp. 80.000 </p>
             </div>
             <div class="flex justify-end px-5 font-semibold bg-slate-500 text-white mt-4">
                 <span><a href="pesanan.php"><p class="font-medium">go to order</p></a></span>

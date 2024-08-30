@@ -18,7 +18,7 @@ $mahasiswa = $query = mysqli_query($conn, 'SELECT * FROM pesanan');
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <title>Document</title>
+    <title>Riwayat Contoh</title>
 </head>
 <body>
     <table>
@@ -30,6 +30,7 @@ $mahasiswa = $query = mysqli_query($conn, 'SELECT * FROM pesanan');
             <th class="border border-blue-500">Tipe Kamar</th>
             <th class="border border-blue-500">DUrasi Menginap</th>
             <th class="border border-blue-500">Total Bayar</th>
+            <th class="boder border-blue-500">Diskon</th>
             <th class="border border-blue-500 px-10">Foto Kamar</th>
             <th class="border border-blue-500 px-10">Video Kamar</th>
             
@@ -44,6 +45,7 @@ $mahasiswa = $query = mysqli_query($conn, 'SELECT * FROM pesanan');
             <th class="border border-blue-500"><?= $row["tipeKamar"]; ?></th>
             <th class="border border-blue-500"><?= $row["durasiMenginap"]; ?></th>
             <th class="border border-blue-500 px-10"><?= $row["totalBayar"]; ?></th>
+            <th class="border border-blue-500"><?= $row["diskon"]; ?></th>
             <th class="border border-blue-500"><img src="<?= $row["fotoKamar"]; ?>" alt="" class="w-48"></th>
             <th class="border border-blue-500">
                 <video controls class="w-32">
